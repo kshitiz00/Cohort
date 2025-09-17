@@ -1,0 +1,105 @@
+How Internet Work?
+1. Devices connect to a network
+    Your phone, laptop, or computer connects to the internet using:
+    Wi-Fi (via a router)
+    Mobile data (via cell towers)
+    Wired connection (Ethernet cable)
+
+2. Router & ISP (Internet Service Provider)
+    Your device sends requests to your router.
+    The router forwards your request to your ISP (like Airtel, Jio, BSNL, etc. in India).
+    The ISP gives you access to the global internet.
+
+3. IP Address
+    Every device on the internet has a unique identifier called an IP address (like a phone number for devices).
+    Your ISP assigns you an IP address so that websites and other devices know where to send information.
+
+4. DNS (Domain Name System)
+    You type www.google.com into your browser.
+    Computers don’t understand names, they understand IP addresses.
+    DNS works like a phonebook, converting the website name into the website’s IP address (e.g., 142.250.190.14).
+
+5. Data travels in packets
+    Your request (“open google.com”) is broken into tiny data packets.
+    These packets travel through cables, satellites, undersea fiber optic lines, and networks across the world.
+    They find the fastest route to reach the destination (like traffic navigation).
+
+6. Servers respond
+    The server where the website is hosted receives your request.
+    It processes it and sends back the website data (also in packets).
+
+7. Reassembling & Display
+    Your browser collects all the packets, reassembles them, and displays the website for you.
+
+This all happens in milliseconds!
+
+✅ In short:
+Your device → Router → ISP → DNS → Internet backbone → Website server → Back to you.
+
+What is MAC Address?
+A MAC address (Media Access Control address) is a unique identifier assigned to a device’s network interface card (NIC). It’s used for communication within a local network (LAN).
+🔑 Key points about MAC address:
+    Format: Usually 12 hexadecimal characters (0–9, A–F), written in pairs, e.g.
+    00:1A:2B:3C:4D:5E or 00-1A-2B-3C-4D-5E
+    Each network device (Wi-Fi card, Ethernet port, Bluetooth adapter) has its own MAC.
+    It works at the Data Link Layer (Layer 2) of the OSI model.
+    Unlike IP addresses (which can change), MAC addresses are generally permanent to the hardware (though they can  be spoofed).
+
+History of Web
+1. Before the Web (1960s–1980s)    
+    The idea of computer networking started in the 1960s with ARPANET (Advanced Research Projects Agency Network, 1969).
+    ARPANET connected universities and research institutions, allowing them to exchange data.
+    Protocols like TCP/IP (1983) became the foundation for the modern Internet.
+
+2. Birth of the World Wide Web (1989–1993)
+    In 1989, Tim Berners-Lee, a British scientist at CERN, proposed the World Wide Web as a system to share documents using hyperlinks.
+    He created:
+    HTML (Hypertext Markup Language) → for creating web pages.
+    HTTP (Hypertext Transfer Protocol) → for communication.
+    URL (Uniform Resource Locator) → for addressing resources.
+    In 1991, the first website went live.
+    By 1993, the first graphical browser, Mosaic, made the web user-friendly.
+
+3. Web 1.0 (1990s – early 2000s)
+    Mostly static websites (read-only).
+    Content was created by a few people, and users were mainly readers.
+    Examples: early Yahoo!, GeoCities, Netscape.
+
+4. Web 2.0 (2004 – present)
+    Transition to interactive, user-generated content.
+    Rise of blogs, wikis, and especially social media (Facebook, YouTube, Twitter).
+    Richer web apps using JavaScript, AJAX, and dynamic content.
+    E-commerce, online banking, and streaming services grew massively.
+
+5. Web 3.0 (Present & Future)
+    Also called the Semantic Web and sometimes linked with Blockchain/Web3.
+    Focus on:
+    AI & Machine Learning → smarter search engines, personalized recommendations.
+    Decentralization → blockchain, cryptocurrencies, NFTs.
+    IoT integration → connecting devices.
+    Immersive experiences → AR/VR and the Metaverse.
+
+🌐 What is Routing?
+    Routing is the process of finding the best path for data packets to travel across networks (from source to destination).
+    Every device on the internet (like your phone, laptop, or a server) has an IP address. Routers are responsible for directing packets between these devices.
+
+🛠 How Routing Works in the Internet
+    Packet Creation
+    Data is broken into packets.
+    Each packet contains: Source IP, Destination IP, and Data.
+    Routers Forward Packets
+    A router checks the destination IP.
+    It uses a routing table (a list of known networks and next hops) to decide where to send the packet.
+    Multiple Hops
+    A packet usually travels through multiple routers (called hops).
+    Each hop brings it closer to the destination.
+    Reaching the Destination
+    Finally, the packet reaches the target device (like a web server).
+    The server responds with packets that follow the reverse route (not always the exact same path).
+
+🗺 Example: Sending a Message Across the Internet
+    You type www.google.com.
+    DNS finds Google’s IP address.
+    Your packet leaves your device → goes to your home router → ISP router → regional routers → backbone routers → Google’s servers.
+    Each router decides the best next hop using BGP/OSPF/etc.
+    Response comes back, possibly along a different path.
