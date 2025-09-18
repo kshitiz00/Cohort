@@ -1,0 +1,247 @@
+Client Server model
+    🔹 What is the Client–Server Model?
+    It’s a way of organizing communication between two entities:
+    Client → Requests services or resources.
+    Server → Provides services or resources.
+
+    Think of it like a restaurant:
+    The client (customer) asks for food.
+    The server (waiter/kitchen) provides the food.
+
+    🔹 How It Works
+    The client sends a request (e.g., “give me this web page”).
+    The server processes the request (finds the page/data).
+    The server sends back a response to the client.
+
+    Example:
+    You open your browser (client) and type www.google.com.
+    The browser sends a request to Google’s server.
+    The server searches for the page and sends back the result (HTML, CSS, JS).
+    Your browser displays the webpage.
+
+What is client ?
+    A client is simply a computer, device, or software program that requests services or resources from another computer (the server) over a network.
+
+    🔹 Key Points About a Client
+    Initiates communication: The client always makes the first move (sends a request).
+    Depends on the server: It cannot provide resources by itself; it just consumes them.
+    User-facing: Often interacts directly with the end-user (like apps, browsers).
+
+    🔹 Examples of Clients
+    Web browser (Chrome, Firefox, Edge) → requests web pages from web servers.
+    Email app (Outlook, Gmail app) → requests emails from mail servers.
+    Mobile apps (Instagram, WhatsApp) → request data from app servers.
+    Game clients (PUBG, Valorant launcher) → connect to game servers.
+
+What is server ?
+    A server is a computer, device, or program that provides services, data, or resources to other computers (called clients) over a network.
+
+    🔹 Key Points About a Server
+    Always listening: A server waits for requests from clients.
+    Provides resources: It stores, processes, and delivers data (web pages, files, apps, media, etc.).
+    Powerful and reliable: Usually stronger than clients (better hardware, high uptime).
+    Can serve many clients: One server can handle requests from hundreds or thousands of clients at the same time.
+
+    🔹 Examples of Servers
+    Web server → Hosts websites (e.g., Apache, Nginx).
+    Mail server → Stores and delivers emails.
+    Database server → Stores and manages databases (e.g., MySQL, MongoDB).
+    Game server → Connects players in an online game.
+    File server → Stores and shares files on a network.
+
+HTTP Request-Response Cycle
+    🔹 Steps in the HTTP Request–Response Cycle
+    Client Initiates a Request
+    You type a URL in your browser (https://www.google.com) or click a link.
+    The browser (client) prepares an HTTP request.
+
+    DNS Resolution
+    The domain name (www.google.com) is converted into an IP address of the server.
+
+    TCP/IP Connection
+    The browser establishes a connection with the server using TCP (Transmission Control Protocol).
+    If HTTPS, then SSL/TLS handshake happens for secure communication.
+
+    Sending the HTTP Request
+    The client sends the request to the server.
+
+    Server Processes the Request
+    The server checks what the client wants (a webpage, data, file, etc.).
+    Fetches it from a database or file system.
+
+    Client Renders the Response
+    Browser interprets the HTML/CSS/JS and shows the webpage.
+
+    Connection Closes (or Reuses)
+    HTTP/1.1 → Persistent connections (reused).
+    HTTP/2/3 → More efficient multiplexing of requests.
+
+Pizza deleivery Example
+    Client makes a request
+    You (the client) call the pizza shop and order a Margherita pizza.
+    This is like your browser sending an HTTP request
+
+    Server receives the request
+    The pizza shop (server) gets your order.
+    It looks at what you asked for and starts preparing it.
+    If it’s a simple pizza, it’s fast (like a static web page).
+    If it needs many toppings, it takes longer (like a dynamic page built from a database).
+
+    Server sends a response
+    The delivery guy brings the pizza box to your house.
+    This is the HTTP response:
+
+    Client uses the response
+    You open the box and eat the pizza.
+    Just like your browser takes the HTML/JS/CSS and renders the webpage for you.
+
+    Error examples (HTTP Status Codes in Pizza Terms):
+    200 OK → Pizza delivered correctly.
+    404 Not Found → Pizza type doesn’t exist on the menu.
+    500 Internal Server Error → Chef burned the pizza.
+    403 Forbidden → Pizza shop refuses to serve you (maybe outside delivery zone).
+    408 Request Timeout → You took too long to decide, and the shop hung up.
+
+What happpen when you visit a website ?
+    🔹 Step 1: Entering the URL
+    You type https://www.google.com in the browser’s address bar.
+    The browser needs to find the server’s IP address where Google is hosted.
+
+    🔹 Step 2: DNS Resolution
+    The Domain Name System (DNS) translates the domain name (www.google.com) into an IP address (like 142.250.183.68).
+    It may check:
+    Browser cache
+    OS cache
+    ISP’s DNS resolver
+    Root servers → TLD servers → Authoritative DNS
+
+    🔹 Step 3: Establishing a Connection
+    Once the IP address is found, the browser establishes a connection to the server.
+    It uses TCP (Transmission Control Protocol) for communication.
+    If it’s HTTPS, a TLS/SSL handshake happens to create a secure encrypted channel.
+
+    🔹 Step 4: Sending an HTTP Request
+    The browser sends a request for the webpage.
+    This tells the server what resource the browser wants.
+
+    🔹 Step 5: Server Processes the Request
+    The server (Google’s web server) receives the request.
+    It processes it — maybe checking databases, backend logic, or cached content.
+    It prepares an HTTP response.
+
+    🔹 Step 6: Server Sends HTTP Response
+    The server sends back something like:
+    HTTP/1.1 200 OK
+    Content-Type: text/html
+    Content-Length: 10240
+    (plus the actual HTML page in the body).
+
+    🔹 Step 7: Browser Renders the Page
+    Browser receives the HTML, then:
+    Parses HTML → Builds DOM Tree.
+    Downloads CSS, JS, images (more HTTP requests).
+    Builds CSSOM Tree from CSS.
+    Executes JavaScript (which may request more data via APIs).
+    Renders final webpage on your screen.
+
+    🔹 Step 8: Additional Optimizations
+    Browser may use caching to avoid re-downloading unchanged resources.
+    CDNs (Content Delivery Networks) may deliver content faster from nearby servers.
+
+    ⚡ In short:
+    Type URL → 2. DNS → 3. TCP/SSL → 4. HTTP Request → 5. Server Process → 6. HTTP Response → 7. Browser Render → ✅ Website displayed.
+
+Difference between frotend and backend
+    🔹 Frontend (Client-Side)
+    👉 Everything the user sees and interacts with in a web application.
+    Works on the browser (client-side).
+    Main focus: User Interface (UI) & User Experience (UX).
+    Languages/Tech:
+    HTML (structure)
+    CSS (style/design)
+    JavaScript (interactivity)
+    Frameworks: React, Angular, Vue, Svelte
+    Examples:
+    Buttons, forms, navigation menus
+    Animations, dropdowns, sliders
+    Webpage layout and colors
+
+    🔹 Backend (Server-Side)
+    👉 Everything that happens behind the scenes to make the frontend work.
+    Works on the server.
+    Main focus: Business logic, database operations, authentication, APIs.
+    Languages/Tech:
+    Node.js, Python (Django/Flask), Java (Spring), PHP, Ruby, Go
+    Databases: MySQL, MongoDB, PostgreSQL
+    Server management, APIs, authentication
+    Examples:
+    Storing user data in a database
+    Validating login credentials
+    Processing payments
+    Fetching data for the frontend to display
+
+Static vs Dynamic website
+    🔹 Static Website
+    👉 A website where the content is fixed and the same for every visitor.
+    Content doesn’t change automatically unless the developer edits the HTML/CSS files.
+    No database connection.
+    Fast to load because it’s just plain files (HTML, CSS, maybe some JS).
+    Cheaper to host and easy to set up.
+
+    Examples:
+    Personal portfolio sites
+    Company info pages (About Us, Contact Us)
+    Documentation pages
+    Tech stack: HTML, CSS, JavaScript (basic)
+
+    🔹 Dynamic Website
+    👉 A website where the content changes depending on user interaction, database, or server logic.
+    Content is generated in real time based on requests.
+    Connected to a database (e.g., MySQL, MongoDB).
+    More complex & interactive.
+    Can show different content for different users.
+
+    Examples:
+    Facebook, Instagram (newsfeed updates)
+    E-commerce sites (Amazon, Flipkart — product availability, pricing)
+    Online banking websites
+    Tech stack: Frontend (HTML, CSS, JS frameworks) + Backend (Node.js, Python, PHP, etc.) + Database
+
+Web hosting and how it works
+    🔹 What is Web Hosting?
+    Web hosting is a service that allows individuals or companies to store their website files (HTML, CSS, JS, images, databases) on a special computer called a server, which is connected to the internet 24/7.
+    👉 When people type your domain name (like www.example.com) in their browser, the hosting server delivers the website files to their device.
+
+    🔹 How Web Hosting Works
+    You build a website (using HTML/CSS/JS or CMS like WordPress).
+    You buy hosting from a provider (e.g., Hostinger, Bluehost, AWS, Google Cloud).
+    Upload your website files (via control panel, FTP, or Git).
+    Connect your domain name (through DNS settings) to your hosting server’s IP address.
+
+    When a user visits your domain:
+    Browser does DNS lookup to find your server’s IP.
+    Sends HTTP request to your hosting server.
+    Server responds with your website’s files.
+    Browser renders the page for the user.
+
+    🔹 Types of Web Hosting
+    Shared Hosting
+    Many websites share the same server.
+    Cheap but slower.
+    Best for beginners & small sites.
+
+    VPS Hosting (Virtual Private Server)
+    Server is split into multiple virtual servers.
+    Faster & more control.
+
+    Dedicated Hosting
+    You rent the entire server.
+    Very powerful & expensive.
+
+    Cloud Hosting
+    Uses multiple servers (scalable & reliable).
+    Examples: AWS, Google Cloud, Azure.
+
+    Managed Hosting
+    Hosting + maintenance (updates, backups, security).
+    Example: WordPress managed hosting.
