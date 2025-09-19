@@ -1,0 +1,96 @@
+What is Internet Protocols ?
+    Internet Protocols are a set of rules and standards that allow computers, servers, and devices to communicate with each other over the internet. Think of them as the “languages” and “guidelines” that ensure smooth data transfer across networks.
+    🔑 Key Internet Protocols
+    IP (Internet Protocol)
+    Responsible for addressing and delivering packets of data from one computer to another.
+    Every device has a unique IP address (like a home address).
+    Versions: IPv4 (older, widely used) and IPv6 (newer, larger address space).
+
+    TCP (Transmission Control Protocol)
+    Ensures reliable communication.
+    Breaks data into packets, sends them, and reassembles them at the destination.
+    Example: When you load a webpage, TCP ensures all parts arrive correctly.
+
+    UDP (User Datagram Protocol)
+    Faster but less reliable than TCP.
+    Used in live streaming, online gaming, or video calls (where speed matters more than perfection).
+
+    HTTP/HTTPS (HyperText Transfer Protocol / Secure)
+    Used for transferring web pages.
+    HTTPS adds encryption for security (the lock symbol 🔒 in browsers).
+
+    FTP (File Transfer Protocol)
+    Transfers files between computers over the internet.
+
+    SMTP, IMAP, POP3 (Email Protocols)
+    SMTP → Sending emails.
+    IMAP/POP3 → Receiving emails.
+
+    DNS (Domain Name System)
+    Converts human-friendly domain names (like google.com) into IP addresses that computers understand.
+
+    DHCP (Dynamic Host Configuration Protocol)
+    Automatically assigns IP addresses to devices on a network.
+
+What is TCP ?
+    🔹 What is TCP?
+    TCP is one of the main communication protocols of the internet.
+    It works together with IP (hence TCP/IP) to make sure data travels safely and correctly between two devices.
+
+    🔑 Key Features of TCP
+    Reliable – Makes sure data arrives without errors.
+    Connection-oriented – Creates a connection (like a phone call) before sending data.
+    Error-checking – Detects lost or damaged data and asks for it again.
+    Orderly delivery – If data comes in parts, TCP puts them back in the correct order.
+    Flow control – Prevents fast senders from overwhelming slow receivers.
+
+    🔄 How TCP Works (Step by Step)
+    Handshake (Connection setup)
+    Before data transfer, TCP uses a 3-way handshake:
+    SYN → Device A: "Can we talk?"
+    SYN-ACK → Device B: "Yes, let’s talk."
+    ACK → Device A: "Great, starting now."
+
+    Data Transfer
+    Breaks data into small packets.
+    Numbers them so the receiver can reorder if needed.
+    Resends any lost packets.
+
+    Connection Termination
+    After finishing, both sides close the connection politely.
+
+    📌 Example in Real Life
+    When you open a webpage: TCP makes sure every image, text, and script arrives complete and in the right order.
+    When you download a file: TCP ensures the file isn’t corrupted by missing pieces.
+
+    👉 In short: TCP = Reliable, ordered, connection-based delivery of data over the internet.
+
+What is UDP ?
+    🔹 What is UDP?
+    UDP is another communication protocol (like TCP), but it focuses on speed over reliability.
+    It just sends data without checking if it was received correctly.
+    Think of it as:
+    TCP = Phone call 📞 (reliable, step by step)
+    UDP = Sending a postcard 📮 (fast, but it may get lost)
+
+    🔑 Key Features of UDP
+    Connectionless – No handshake before sending data.
+    Fast – Less overhead, no waiting for acknowledgments.
+    Unreliable – Doesn’t check for lost or corrupted packets.
+    No ordering – Packets may arrive in the wrong order.
+    Lightweight – Uses less data and resources.
+
+    🔄 How UDP Works
+    Sender just sends packets (called datagrams).
+    Receiver gets them (if they arrive).
+    No guarantee of delivery, order, or integrity.
+
+    📌 Examples in Real Life
+    Online gaming 🎮 → Speed is more important than resending lost data.
+    Live video/audio streaming 📺🎤 → A small glitch is better than delay.
+    Video calls (Zoom, WhatsApp, Skype) → Keeps conversation real-time.
+    DNS queries → Very small, quick messages.
+
+Difference between TCP and UDP ?
+    TCP = 📞 Phone call → Reliable, step by step, no data loss.
+    UDP = 📮 Postcard → Fast, but might get lost, no guarantee.
