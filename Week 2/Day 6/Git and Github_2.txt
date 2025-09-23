@@ -1,11 +1,125 @@
 Four main parts of Git and GitHub
+    The Git & GitHub commit cycle generally goes through four main parts when you work on code:
+
+    Working Directory (Untracked/Modified files)
+    This is where you edit your project files.
+    Any changes made here are not yet tracked by Git until you stage them.
+
+    Staging Area (Index)
+    When you run git add <file>, your changes move into the staging area.
+    It’s like a "draft box" where you prepare files for the next commit.
+
+    Local Repository (Commit)
+    Running git commit -m "message" saves the staged changes permanently into your local Git repository’s history.
+    Now the changes are part of your local project history.
+
+    Remote Repository (Push to GitHub)
+    When you run git push origin main (or another branch), your commits are sent from your local repository to GitHub (the remote repository).
+    This makes your changes visible to collaborators.
+
+    👉 In short:
+    Working Directory → Staging Area → Local Repository → Remote Repository
+
 Working directory
+    The Working Directory is the place on your computer where your actual project files live.
+
+    Here’s what it means in Git:
+    It’s the real folder where you create, edit, or delete files.
+    Any changes you make here are considered unstaged (not yet tracked by Git for the next commit).
+    When you run git status, Git will show you which files in the working directory are modified, untracked, or deleted.
+
 Staging area
+    Staging Area (also called Index or Cache)
+    It’s like a holding area between your Working Directory and your Local Repository.
+    After editing files in the working directory, you add them to the staging area using:
+    git add <filename>
+    Files in the staging area are ready to be committed, but not yet saved into the project history.
+    You can stage specific files (to commit only some changes) or stage all changes (git add .).
+
 Local repository
+    The Local Repository is where Git permanently stores your project’s history on your computer.
+
+    When you run:
+    git commit -m "your message"
+    the files move from the Staging Area → Local Repository.
+    Commits here are like snapshots of your project at a specific point in time.
+    You can view all commits with:
+    git log
+    Even if you’re offline, your commits are safe in the local repo.
+
 Remote repository
+    A Remote Repository is the version of your project stored on the internet (e.g., GitHub, GitLab, Bitbucket).
+    It allows you to share your work with teammates or access it from anywhere.
+    To send your commits from the Local Repository → Remote Repository, you run:
+    git push origin main
+    (or whichever branch you’re working on).
+
+    To get updates from others, you use:
+    git pull origin main
+    This keeps everyone’s work synchronized.
+    
 What is repository in git ?
+    A repository (repo) in Git is like a storage space for your project where Git tracks and manages the entire history of your files.
+
+    It contains:
+    All your project files and folders (code, documents, etc.).
+    Hidden .git folder (created when you run git init) which stores:
+    commits
+    branches
+    configuration
+    and the history of every change.
+
+    👉 There are two types of repositories in Git workflow:
+    Local Repository: stored on your computer.
+    Remote Repository: stored on platforms like GitHub, GitLab, or Bitbucket.
+
 Local vs remote repository ?
+    Local Repository
+    Stored on your own computer.
+    Created when you run git init or clone a repo.
+    Contains all your commits, branches, and history.
+    You can work offline (make commits, switch branches, view logs).
+
+    Example commands:
+    git commit → saves changes to local repo
+    git log → shows commit history
+    👉 Analogy: Your personal notebook/diary 📓 that only you can write in.
+
+    Remote Repository
+    Stored on a server (cloud) like GitHub, GitLab, Bitbucket.
+    Accessible by you and your teammates.
+    Used for collaboration and backup.
+    Requires internet to sync.
+
+    Example commands:
+    git push → sends commits from local → remote
+    git pull → fetches changes from remote → local
+    👉 Analogy: A shared online Google Doc 🌐 where everyone can contribute and stay updated.
+
+    ✅ In short:
+    Local repo = on your computer (private work).
+    Remote repo = on GitHub/GitLab/etc. (shared work).
+
 ctrl + shift + . to show hidden folder
 Commands
 git config --global user.name "User name"
 git config --global user.email "User email"
+    1. Set Global Username
+    git config --global user.name "User name"
+    This tells Git the name that will appear in your commits.
+    Example: if you set user.name to Kshitiz Joshi, every commit will show:
+    Author: Kshitiz Joshi <youremail@example.com>
+
+    2. Set Global Email
+    git config --global user.email "User email"
+    This sets the email address linked with your commits.
+    This email should ideally be the same one used in your GitHub account, so commits appear linked to your GitHub profile.
+
+    Why --global?
+    --global means these settings apply to all repositories on your computer.
+    If you want to set a different name/email for just one repository, you can omit --global:
+    git config user.name "Another Name"
+    git config user.email "another@email.com"
+    
+    👉 To check your settings:
+    git config --list
