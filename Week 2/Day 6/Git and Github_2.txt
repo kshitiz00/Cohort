@@ -1,0 +1,11 @@
+Four main parts of Git and GitHub
+Working directory
+Staging area
+Local repository
+Remote repository
+What is repository in git ?
+Local vs remote repository ?
+ctrl + shift + . to show hidden folder
+Commands
+git config --global user.name "User name"
+git config --global user.email "User email"

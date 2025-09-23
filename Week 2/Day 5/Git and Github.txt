@@ -1,0 +1,58 @@
+What is Version Control ?
+    Version Control is a system that helps track and manage changes to files, projects, or codebases over time. It allows multiple people (or even a single developer) to work on the same project without overwriting each other’s work, and provides a way to go back to earlier versions if needed.
+    Think of it as a "time machine" for your code or documents.
+
+    Key points about Version Control:
+    Tracks Changes → Keeps a history of edits, additions, and deletions.
+    Collaboration → Multiple developers can work together without conflicts.
+    Backup & Recovery → You can roll back to a stable version if something breaks.
+    Branching & Merging → Developers can experiment in separate branches and later merge changes into the main project.
+    Accountability → Shows who made changes, when, and why (with commit messages).
+
+    Types of Version Control:
+    Local Version Control → Stores revisions on your local machine (simple but limited).
+    Centralized Version Control (CVCS) → One central server (e.g., Subversion, CVS).
+    Distributed Version Control (DVCS) → Every developer has a full copy of the repository (e.g., Git, Mercurial).
+
+    👉 The most widely used version control system today is Git, and platforms like GitHub, GitLab, Bitbucket make collaboration easier.
+What is Git and Github ?
+    🔹 What is Git?
+    Git is a Distributed Version Control System (DVCS).
+    It helps developers track changes in code, manage versions, and collaborate with others.
+    Every developer has a full copy of the project history on their machine.
+    It allows you to create branches, experiment with features, and then merge changes back into the main project.
+
+    👉 Example: If you are building a website, Git can keep track of every change (like editing HTML, CSS, JS files). You can revert back to old versions anytime.
+
+    🔹 What is GitHub?
+    GitHub is a cloud-based hosting platform for Git repositories.
+    It provides a remote server where you can store your Git projects online.
+    It makes collaboration easier by letting multiple developers contribute to the same project.
+
+    Features of GitHub:
+    Remote Repositories → Store code online, accessible anywhere.
+    Collaboration → Multiple people can work on the same repo.
+    Pull Requests (PRs) → Propose and review changes before merging.
+    Issues & Project Boards → Track bugs, tasks, and progress.
+    Integration → Works with CI/CD, actions, and many dev tools.
+
+    👉 Think of Git as the tool (installed on your computer), and GitHub as the online platform where you share your Git projects.
+
+    ✅ Simple Analogy:
+
+    Git = Personal diary (you write and track everything on your computer).
+    GitHub = Social media for code (you publish your diary online so others can see, comment, and contribute).
+Commands
+git  -v
+    Tells the version of git installed
+
+git init
+    To initialize the git repository for version control
+
+git add .
+    To add all the files to the staging area
+
+git commit -m "Message/Tag"
+    Commit the file it's like a snapshot for code at a particular time.
+    
+ctrl + backtick -> terminal open 
