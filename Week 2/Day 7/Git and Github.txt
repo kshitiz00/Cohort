@@ -1,0 +1,66 @@
+Branching In Git
+    git branch branch-name -> To create a new branch
+    git checkout branch-name -> To switch to newly created branch
+    git checkout -b branch-name -> To create and switch new branch
+    git branch -> To see all the branches
+    git branch -a -> To see all the local and remote branches
+    git branch -d branch-name -> To delete a branch
+    git merge branch-name -> To merge source branch (Command shouls be run from destination branch)
+
+Undo a commit
+    git reset --soft CommitId -> To undo changes but changes are in staging area for next commit
+    git reset --mixed CommitId -> To undo changes but changes are unstaged
+    git reset --hard CommitId -> To undo changes permanently
+    git revert CommitId - > To undo changes with a new commit
+
+Pull, Push and clone
+    git clone <repo url> -> To clone a remo repo to local sysyem
+    🔹 git pull
+    👉 Download and integrate changes from remote repo into your local branch.
+    Syntax:
+    git pull <remote> <branch>
+    <remote> → usually origin (default remote name).
+    <branch> → the branch you want updates from (e.g., main).
+
+    Example:
+    git pull origin main
+    This fetches new commits from origin/main and merges them into your current local main.
+    ⚠️ If someone else pushed code, git pull makes sure you have their changes before you continue working.
+
+    🔹 git push
+    👉 Upload your local commits to a remote repo.
+    Syntax:
+    git push <remote> <branch>
+    <remote> → usually origin.
+    <branch> → the branch you want to push.
+
+    Example:
+    git push origin feature-branch
+    This sends your local commits on feature-branch to the remote repository’s feature-branch.
+
+    ⚠️ If your branch is behind remote (someone else pushed changes first), Git will reject your push.
+    In that case, you need to:
+
+    git pull origin branch-name
+    # (resolve conflicts if any)
+
+Rebase
+    git rebase is used to move or replay commits from one branch on top of another branch.
+    It helps create a clean, linear commit history without unnecessary merge commits.
+    🔹 Syntax
+    git rebase <base-branch>
+    This takes the commits from your current branch and re-applies them on top of <base-branch>.
+
+    🔹 Example
+    Suppose you have this history:
+    main:    A --- B --- C
+                    \
+    feature:         D ---
+    Now, if you run:
+    git checkout feature
+    git rebase main
+    Git will replay commits D and E on top of C, so the history becomes:
+    main:    A --- B --- C
+                              \
+    feature:                   D' --- E'
+    👉 Notice: D and E became D' and E' (new commits with new hashes).
