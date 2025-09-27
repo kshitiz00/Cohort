@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: new;
+  src: url(./Spooktober.ttf);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  background-color: red;
+  font-family: new;
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  text-transform: uppercase;
+}
