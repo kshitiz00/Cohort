@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Yorksign;
+  src: url(./Yorksign.otf);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  background-image: url(./Rcb.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Yorksign;
+  color: black;
+  padding-top: 30px;
+  text-align: center;
+}
+
+p {
+  font-size: 40px;
+}
+button {
+  padding: 10px 40px;
+  background-color: transparent;
+  color: rgb(210, 207, 119);
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+}
