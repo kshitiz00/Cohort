@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Card */
+/* #card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid rgb(188, 208, 213);
+}
+
+#pattern img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 120px;
+  background-color: rgb(248, 248, 244);
+  position: relative;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+#content img {
+  border-radius: 50%;
+  position: absolute;
+  top: -40%;
+}
+
+#ratings {
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  text-align: center;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#main {
+  width: 100%;
+  height: 100%;
+}
+
+#discount {
+  text-align: center;
+  background-color: rgb(7, 7, 84);
+  color: white;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+#Navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: rgb(206, 177, 134);
+  position: sticky;
+  top: 0%;
+  height: 7vh;
+}
+
+#logo {
+  font-size: 20px;
+}
+#nav-items {
+  width: 20%;
+}
+
+#nav-items ul {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+#img {
+  background-image: url(./Perfumes.jpg);
+  height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#img h2 {
+  color: #d52f05;
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+#img button {
+  padding: 10px 20px;
+  background-color: #d52f05;
+  border: none;
+  border-radius: 20px;
+  color: #e3cac3;
+}
