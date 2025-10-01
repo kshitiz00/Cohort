@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Helvetica;
+  src: url(./Helvetica.ttf);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica;
+}
+
+/* Navbar */
+#container {
+  width: 85%;
+  margin: auto;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.nav-items {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+#logo {
+  font-size: 25px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+/* Poster */
+
+#heading {
+  /* padding-top: 10px; */
+  font-size: 150px;
+  font-weight: 100;
+}
+
+/* Section-left */
+#left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 250px;
+  justify-content: space-between;
+  height: 150px;
+}
+
+#left h3 {
+  margin-bottom: 8px;
+}
+
+.align-left {
+  margin-bottom: 30px;
+}
+
+/* Bottom Nav */
+#bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#new-collection {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+}
+
+#shop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+#shop a {
+  color: black;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Images */
+
+.images {
+  position: absolute;
+}
+
+#image1 {
+  top: 45%;
+  right: 25%;
+  z-index: 9;
+}
+
+#image2 {
+  top: 55%;
+  right: 48%;
+  z-index: 7;
+}
+
+#image3 {
+  top: 70%;
+  right: 37%;
+  z-index: 8;
+}
